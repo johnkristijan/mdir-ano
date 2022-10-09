@@ -1,6 +1,7 @@
 import express from 'express'
 
 import fetchSurveyPoint from './fetchSurveyPoint.js'
+import fetchFlater from './fetchFlater.js'
 import fetchArt from './fetchArt.js'
 import fetchFremmedart from './fetchFremmedart.js'
 import fetchProblemart from './fetchProblemart.js'
@@ -23,6 +24,12 @@ app.get('/v2/ano', async (req, res) => {
     // v2 har også med fylkenavn
     const anoData = await fetchSurveyPoint(true)
     res.send(anoData) // 8974 rows
+})
+
+// API Layer - ANO_Flate
+app.get('/v1/flater', async (req, res) => {
+    const data = await fetchFlater()
+    res.send(data) // 1248 rows
 })
 
 // API Layer - ANO_Art
