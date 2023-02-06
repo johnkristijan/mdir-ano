@@ -97,10 +97,9 @@ const fetchSurveyPoint = async (addFylke = false) => {
         'bv_7se',
         'bv_7tk',
         'creationdate',
-        'fa_total_dekning',
+        // 'fa_total_dekning', // har forsvunnet fra API per 14. nov
         'forekomst_ntyp',
-        'forekomst_ntyp',
-        'hovedoekosystem_punkt',
+        'hovedoekosystem_250m2', // 'hovedoekosystem_punkt', // har endret navn til hovedoekosystem_250m2
         'hovedtype_1m2',
         'ikke_krypende_vier_dekning',
         'karplanter_dekning',
@@ -147,7 +146,6 @@ const fetchSurveyPoint = async (addFylke = false) => {
                 ...x.properties,
             }
         }
-
         data.push(obj)
     }
     return data

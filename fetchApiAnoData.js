@@ -32,7 +32,9 @@ const fetchApiAnoData = async (fieldsToFetch) => {
             recordCount +
             '&returnExtentOnly=false&datumTransformation=&parameterValues=&rangeValues=&quantizationParameters=&featureEncoding=esriDefault&f=' +
             dataFormat
-    
+        // where=1%3D1
+        // const fields = '*'
+        // =pjson
         const url =
             'https://arcgis06.miljodirektoratet.no/arcgis/rest/services/naturovervaking/ano/MapServer/0/query?' +
             queryParams
